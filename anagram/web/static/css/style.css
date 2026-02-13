@@ -11,14 +11,11 @@ body {
     background: linear-gradient(135deg, #ff6b9d 0%, #c44569 25%, #f8b500 50%, #ff6b9d 75%, #c44569 100%);
     background-size: 400% 400%;
     animation: valentineGradient 15s ease infinite;
-    height: 100vh;
+    min-height: 100vh;
     color: #2c3e50;
-    padding: 10px;
+    padding: 20px;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow-x: hidden;
 }
 
 /* Valentine's Background Animation */
@@ -81,18 +78,15 @@ body {
 
 .container {
     max-width: 900px;
-    width: 100%;
-    max-height: 95vh;
+    margin: 0 auto;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 240, 245, 0.95));
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(255, 107, 157, 0.3), 0 0 20px rgba(255, 182, 193, 0.2);
-    overflow-y: auto;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(255, 107, 157, 0.3), 0 0 30px rgba(255, 182, 193, 0.2);
+    overflow: hidden;
     position: relative;
     z-index: 2;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 182, 193, 0.3);
-    display: flex;
-    flex-direction: column;
 }
 
 /* Header Styles */
@@ -100,10 +94,9 @@ body {
     background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 50%, #ffc3d3 100%);
     color: white;
     text-align: center;
-    padding: 20px 15px;
+    padding: 30px 20px;
     position: relative;
     overflow: hidden;
-    flex-shrink: 0;
 }
 
 .header::before {
@@ -168,15 +161,14 @@ body {
 /* Game Controls */
 .game-controls {
     background: linear-gradient(135deg, rgba(255, 240, 245, 0.8), rgba(255, 182, 193, 0.1));
-    padding: 15px 20px;
+    padding: 25px;
     border-bottom: 2px solid rgba(255, 107, 157, 0.2);
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
-    flex-shrink: 0;
 }
 
 .control-group {
@@ -302,10 +294,10 @@ select:focus {
 /* Praise Pause Section */
 .praise-pause-section {
     text-align: center;
-    margin: 15px 0;
-    padding: 15px;
+    margin: 30px 0;
+    padding: 25px;
     background: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(255, 240, 245, 0.15));
-    border-radius: 15px;
+    border-radius: 20px;
     border: 2px solid rgba(255, 182, 193, 0.3);
     position: relative;
     overflow: hidden;
@@ -411,9 +403,8 @@ select:focus {
 
 /* Game Area */
 .game-area {
-    padding: 15px 20px;
-    flex: 1;
-    overflow-y: auto;
+    padding: 30px;
+    min-height: 400px;
 }
 
 .challenge-section {
@@ -561,12 +552,10 @@ select:focus {
 /* Stats */
 .stats {
     background: linear-gradient(135deg, rgba(255, 240, 245, 0.8), rgba(255, 182, 193, 0.1));
-    padding: 12px 15px;
+    padding: 20px;
     display: flex;
     justify-content: space-around;
     border-top: 2px solid rgba(255, 107, 157, 0.2);
-    flex-shrink: 0;
-    align-items: center;
 }
 
 .stat-item {
@@ -591,10 +580,9 @@ select:focus {
     background: linear-gradient(135deg, #c44569 0%, #8e44ad 100%);
     color: white;
     text-align: center;
-    padding: 15px 15px;
+    padding: 30px 20px;
     position: relative;
     overflow: hidden;
-    flex-shrink: 0;
 }
 
 .footer::before {
