@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Book Scramble Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📖 Bible Book Scramble</h1>
+            <p>Unscramble Bible book names in English or French!</p>
+        </header>
+
+        <div class="game-controls">
+            <div class="control-group">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="english">English</option>
+                    <option value="french">Français</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="testament-select">Testament:</label>
+                <select id="testament-select">
+                    <option value="any">Any</option>
+                    <option value="old">Old Testament</option>
+                    <option value="new">New Testament</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <button id="new-challenge-btn" class="btn btn-primary">New Challenge</button>
+                <button id="custom-scramble-btn" class="btn btn-secondary">Custom Scramble</button>
+                <button id="show-books-btn" class="btn btn-secondary">Show All Books</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div id="challenge-section" class="challenge-section" style="display: none;">
+                <div class="scrambled-word">
+                    <h2 id="scrambled-display">Click "New Challenge" to start!</h2>
+                </div>
+
+                <div class="hint-section">
+                    <p><strong>Hint:</strong> <span id="hint-display">-</span></p>
+                </div>
+
+                <div class="answer-section">
+                    <input type="text" id="answer-input" placeholder="Enter your guess..." maxlength="50">
+                    <button id="submit-btn" class="btn btn-primary">Submit</button>
+                    <button id="give-up-btn" class="btn btn-warning">Give Up</button>
+                </div>
+
+                <div id="result-display" class="result-display"></div>
+            </div>
+
+            <div id="custom-section" class="custom-section" style="display: none;">
+                <h3>Custom Scramble</h3>
+                <div class="custom-controls">
+                    <input type="text" id="custom-book-input" placeholder="Enter Bible book name..." maxlength="50">
+                    <button id="scramble-custom-btn" class="btn btn-primary">Scramble It!</button>
+                </div>
+                <div id="custom-result" class="custom-result"></div>
+            </div>
+
+            <div id="books-section" class="books-section" style="display: none;">
+                <h3>All Bible Books</h3>
+                <div id="books-list" class="books-list"></div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-label">Score:</span>
+                <span id="score-display">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Streak:</span>
+                <span id="streak-display">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Total Played:</span>
+                <span id="total-display">0</span>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Challenge yourself with Bible book names from both testaments!</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

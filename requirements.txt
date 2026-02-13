@@ -1,0 +1,11 @@
+# Bible Book Scramble - Project Dependencies
+# This file contains all dependencies for both CLI and web versions
+
+# Web Application Dependencies
+Flask>=2.3.3
+
+# Development Dependencies (optional)
+# pytest>=7.0.0  # For testing (uncomment if adding pytest)
+
+# Note: The CLI version requires no external dependencies
+# and runs with Python standard library only
