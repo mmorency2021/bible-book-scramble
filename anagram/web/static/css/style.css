@@ -724,3 +724,17 @@ select:focus {
 .fade-in {
     animation: fadeIn 0.5s ease;
 }
+
+/* SDA Identity Styling */
+.sda-identity {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 8px 15px;
+    border-radius: 12px;
+    margin: 0 auto;
+    max-width: 350px;
+    font-size: 0.85em;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
