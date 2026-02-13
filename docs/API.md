@@ -5,7 +5,7 @@ This document describes the REST API endpoints for the Bible Book Scramble web a
 ## Base URL
 
 ```
-http://localhost:5000
+http://localhost:8000
 ```
 
 ## 📋 Table of Contents
@@ -188,7 +188,7 @@ All endpoints return errors in this format:
 
 **Request:**
 ```bash
-curl -X POST http://localhost:5000/api/random-challenge \
+curl -X POST http://localhost:8000/api/random-challenge \
   -H "Content-Type: application/json" \
   -d '{"language": "english", "testament": "old"}'
 ```
@@ -207,7 +207,7 @@ curl -X POST http://localhost:5000/api/random-challenge \
 
 **Request:**
 ```bash
-curl -X POST http://localhost:5000/api/check-answer \
+curl -X POST http://localhost:8000/api/check-answer \
   -H "Content-Type: application/json" \
   -d '{"original": "Judges", "guess": "Judges"}'
 ```
@@ -224,7 +224,7 @@ curl -X POST http://localhost:5000/api/check-answer \
 
 **Request:**
 ```bash
-curl -X POST http://localhost:5000/api/custom-scramble \
+curl -X POST http://localhost:8000/api/custom-scramble \
   -H "Content-Type: application/json" \
   -d '{"book_name": "Genèse", "language": "french"}'
 ```
@@ -243,7 +243,7 @@ curl -X POST http://localhost:5000/api/custom-scramble \
 
 **Request:**
 ```bash
-curl "http://localhost:5000/api/all-books?language=french"
+curl "http://localhost:8000/api/all-books?language=french"
 ```
 
 **Response:**
@@ -273,14 +273,14 @@ Test each endpoint using curl commands as shown in the examples above.
 import requests
 
 # Test random challenge
-response = requests.post('http://localhost:5000/api/random-challenge',
+response = requests.post('http://localhost:8000/api/random-challenge',
                         json={'language': 'english', 'testament': 'any'})
 data = response.json()
 print(f"Scrambled: {data['scrambled']}")
 print(f"Hint: {data['hint']}")
 
 # Test answer checking
-response = requests.post('http://localhost:5000/api/check-answer',
+response = requests.post('http://localhost:8000/api/check-answer',
                         json={'original': data['original'], 'guess': 'Genesis'})
 result = response.json()
 print(f"Correct: {result['correct']}")

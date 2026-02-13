@@ -192,7 +192,7 @@ gunicorn -w 4 app:app
 ## 🎮 How to Play
 
 ### Web Version:
-1. Open http://localhost:5000
+1. Open http://localhost:8000
 2. Choose language (English/French)
 3. Select testament filter
 4. Click "New Challenge"
@@ -240,10 +240,10 @@ pip install -r requirements.txt
 chmod +x web/start_server.sh
 ```
 
-**Port 5000 already in use:**
+**Port 8000 already in use:**
 ```bash
-# Change port in web/app.py
-app.run(debug=True, port=5001)
+# Change port in anagram/web/app.py
+port = int(os.environ.get('PORT', 8001))
 ```
 
 ## 📞 Support

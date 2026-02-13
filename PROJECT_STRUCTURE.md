@@ -56,7 +56,7 @@ python3 bible_scrambler_cli.py
 ```bash
 cd anagram/web/
 python3 app.py
-# Open: http://localhost:5000
+# Open: http://localhost:8000
 ```
 
 ## 📁 Directory Purposes
@@ -108,7 +108,7 @@ python3 app.py
 ## 🎯 Usage Paths
 
 ### For Players
-1. **Casual gaming**: Use web interface at `http://localhost:5000`
+1. **Casual gaming**: Use web interface at `http://localhost:8000`
 2. **Terminal gaming**: Run CLI with `python3 bible_scrambler_cli.py`
 3. **Mobile gaming**: Web interface works on phones/tablets
 

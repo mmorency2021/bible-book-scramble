@@ -281,7 +281,7 @@ Your guess: Genesis
 
 ### Web API Example
 ```bash
-curl -X POST http://localhost:5000/api/random-challenge \
+curl -X POST http://localhost:8000/api/random-challenge \
   -H "Content-Type: application/json" \
   -d '{"language": "english", "testament": "any"}'
 

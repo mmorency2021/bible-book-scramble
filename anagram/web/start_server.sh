@@ -16,7 +16,7 @@ if ! python3 -c "import flask" 2>/dev/null; then
     pip3 install flask
 fi
 
-echo "Starting web server on http://localhost:5000"
+echo "Starting web server on http://localhost:8000"
 echo "Press Ctrl+C to stop the server"
 echo ""
 
