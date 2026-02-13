@@ -354,6 +354,28 @@ select:focus {
     color: #8e44ad;
 }
 
+.sda-motto {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: rgba(142, 68, 173, 0.1);
+    border-radius: 12px;
+    color: #8e44ad;
+    font-weight: 600;
+    font-style: italic;
+    border: 1px solid rgba(142, 68, 173, 0.2);
+}
+
+.sda-motto {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, rgba(142, 68, 173, 0.1), rgba(196, 69, 105, 0.1));
+    border-radius: 20px;
+    font-style: italic;
+    font-weight: 500;
+    color: #8e44ad;
+    border: 1px solid rgba(142, 68, 173, 0.2);
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-10px) rotate(180deg); }
@@ -578,11 +600,24 @@ select:focus {
     background: rgba(255, 255, 255, 0.1);
     padding: 10px 20px;
     border-radius: 15px;
-    margin: 0 auto;
+    margin: 0 auto 15px;
     max-width: 400px;
     font-style: italic;
     position: relative;
     z-index: 1;
+}
+
+.sda-identity {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 350px;
+    font-weight: 500;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @keyframes twinkle {
