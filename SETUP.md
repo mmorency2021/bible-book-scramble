@@ -56,7 +56,7 @@ python3 app.py
 # or
 ./start_server.sh
 
-# Open browser to: http://localhost:5000
+# Open browser to: http://localhost:8000
 ```
 
 ### Option 2: Command Line Interface
