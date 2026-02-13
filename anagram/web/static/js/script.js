@@ -27,6 +27,7 @@ class BibleScrambleGame {
         this.submitBtn = document.getElementById('submit-btn');
         this.giveUpBtn = document.getElementById('give-up-btn');
         this.scrambleCustomBtn = document.getElementById('scramble-custom-btn');
+        this.resetScoreBtn = document.getElementById('reset-score-btn');
 
         // Sections
         this.challengeSection = document.getElementById('challenge-section');
@@ -60,6 +61,7 @@ class BibleScrambleGame {
         this.submitBtn.addEventListener('click', () => this.submitAnswer());
         this.giveUpBtn.addEventListener('click', () => this.giveUp());
         this.scrambleCustomBtn.addEventListener('click', () => this.scrambleCustomBook());
+        this.resetScoreBtn.addEventListener('click', () => this.resetScore());
 
         // Enter key support
         this.answerInput.addEventListener('keypress', (e) => {
@@ -377,6 +379,52 @@ class BibleScrambleGame {
         this.scoreDisplay.textContent = this.stats.score;
         this.streakDisplay.textContent = this.stats.streak;
         this.totalDisplay.textContent = this.stats.total;
+    }
+
+    resetScore() {
+        // Ask for confirmation before resetting
+        if (confirm('Are you sure you want to reset all statistics? This action cannot be undone.')) {
+            this.stats = {
+                score: 0,
+                streak: 0,
+                total: 0
+            };
+
+            this.saveStats();
+            this.updateDisplay();
+
+            // Show confirmation message
+            this.showResetConfirmation();
+        }
+    }
+
+    showResetConfirmation() {
+        // Create a temporary confirmation message
+        const confirmation = document.createElement('div');
+        confirmation.innerHTML = '✅ Statistics reset successfully!';
+        confirmation.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(86, 171, 47, 0.3);
+            z-index: 1000;
+            animation: slideIn 0.5s ease;
+        `;
+
+        document.body.appendChild(confirmation);
+
+        // Remove after 3 seconds
+        setTimeout(() => {
+            confirmation.style.animation = 'slideOut 0.5s ease';
+            setTimeout(() => {
+                document.body.removeChild(confirmation);
+            }, 500);
+        }, 3000);
     }
 }
 
