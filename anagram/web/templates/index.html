@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Book Scramble Game</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Google Fonts for beautiful typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="valentine-background">
+        <div class="hearts-animation">
+            <div class="heart heart-1">💖</div>
+            <div class="heart heart-2">💕</div>
+            <div class="heart heart-3">💖</div>
+            <div class="heart heart-4">💕</div>
+            <div class="heart heart-5">💖</div>
+        </div>
+    </div>
+
     <div class="container">
         <header class="header">
-            <h1>📖 Bible Book Scramble</h1>
-            <p>Unscramble Bible book names in English or French!</p>
+            <div class="header-decoration">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-bible"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1>💖 Bible Book Scramble 💖</h1>
+            <p class="subtitle">A Valentine's Day Special - Unscramble Bible book names with love!</p>
+            <div class="valentine-message">
+                <i class="fas fa-heart"></i>
+                <span>"Love bears all things, believes all things, hopes all things, endures all things" - 1 Cor 13:7</span>
+                <i class="fas fa-heart"></i>
+            </div>
         </header>
 
         <div class="game-controls">
@@ -44,8 +68,25 @@
                     <h2 id="scrambled-display">Click "New Challenge" to start!</h2>
                 </div>
 
+                <!-- Praise Pause Branding with Valentine Theme -->
+                <div class="praise-pause-section">
+                    <div class="valentine-decoration">
+                        <i class="fas fa-heart pulse"></i>
+                        <i class="fas fa-cross"></i>
+                        <i class="fas fa-heart pulse"></i>
+                    </div>
+                    <h3 class="praise-pause-title">💕 Praise Pause Jeunesse de Mont-sinai 💕</h3>
+                    <p class="valentine-subtitle">Celebrating God's Love this Valentine's Day</p>
+                    <div class="love-verse">
+                        <i class="fas fa-quote-left"></i>
+                        <span>"We love because He first loved us"</span>
+                        <i class="fas fa-quote-right"></i>
+                        <small>- 1 John 4:19</small>
+                    </div>
+                </div>
+
                 <div class="hint-section">
-                    <p><strong>Hint:</strong> <span id="hint-display">-</span></p>
+                    <p><strong>💌 Hint:</strong> <span id="hint-display">-</span></p>
                 </div>
 
                 <div class="answer-section">
@@ -88,7 +129,15 @@
         </div>
 
         <footer class="footer">
-            <p>Challenge yourself with Bible book names from both testaments!</p>
+            <div class="footer-hearts">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-bible"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+            <p>💕 Spreading God's love through His Word this Valentine's Day! 💕</p>
+            <div class="footer-verse">
+                <small>"Above all else, guard your heart, for everything you do flows from it" - Proverbs 4:23</small>
+            </div>
         </footer>
     </div>
 
