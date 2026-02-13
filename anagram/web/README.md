@@ -45,7 +45,7 @@ A fun and interactive web-based game for scrambling Bible book names in English 
    ./start_server.sh
    ```
 
-3. Open your browser and go to: http://localhost:5000
+3. Open your browser and go to: http://localhost:8000
 
 ### Manual Start
 

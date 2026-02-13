@@ -34,7 +34,7 @@ A comprehensive Bible book scrambling game available in both **Command Line Inte
 cd anagram/web/
 python3 app.py
 ```
-Then open: http://localhost:5000
+Then open: http://localhost:8000
 
 ### Option 2: Command Line Interface
 ```bash
@@ -90,7 +90,7 @@ bible-book-scramble/
    cd anagram/web/
    python3 app.py
    ```
-2. **Open your web browser** and go to: `http://localhost:5000`
+2. **Open your web browser** and go to: `http://localhost:8000`
 3. You'll see the beautiful Bible Book Scramble game interface!
 
 ### Web Interface Guide

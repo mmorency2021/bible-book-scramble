@@ -31,7 +31,7 @@ A comprehensive Bible book scrambling application available in both **Command Li
 cd web/
 python3 app.py
 ```
-Then open your browser to: **http://localhost:5000**
+Then open your browser to: **http://localhost:8000**
 
 ### Command Line Interface
 ```bash
@@ -309,12 +309,12 @@ The web application provides a RESTful API for integration:
 ### Example Usage
 ```bash
 # Get random challenge
-curl -X POST http://localhost:5000/api/random-challenge \
+curl -X POST http://localhost:8000/api/random-challenge \
   -H "Content-Type: application/json" \
   -d '{"language": "english", "testament": "any"}'
 
 # Check answer
-curl -X POST http://localhost:5000/api/check-answer \
+curl -X POST http://localhost:8000/api/check-answer \
   -H "Content-Type: application/json" \
   -d '{"original": "Genesis", "guess": "Genesis"}'
 ```

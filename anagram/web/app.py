@@ -164,7 +164,7 @@ if __name__ == '__main__':
     if not os.path.exists(templates_dir):
         os.makedirs(templates_dir)
 
-    # Use environment port for deployment, fallback to 5000 for local
-    port = int(os.environ.get('PORT', 5000))
+    # Use environment port for deployment, fallback to 8000 for local
+    port = int(os.environ.get('PORT', 8000))
     debug = os.environ.get('FLASK_ENV', 'development') == 'development'
     app.run(debug=debug, host='0.0.0.0', port=port)
