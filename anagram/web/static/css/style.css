@@ -168,14 +168,15 @@ body {
 /* Game Controls */
 .game-controls {
     background: linear-gradient(135deg, rgba(255, 240, 245, 0.8), rgba(255, 182, 193, 0.1));
-    padding: 30px 25px;
+    padding: 15px 20px;
     border-bottom: 2px solid rgba(255, 107, 157, 0.2);
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px);
+    flex-shrink: 0;
 }
 
 .control-group {
@@ -301,10 +302,10 @@ select:focus {
 /* Praise Pause Section */
 .praise-pause-section {
     text-align: center;
-    margin: 30px 0;
-    padding: 25px;
+    margin: 15px 0;
+    padding: 15px;
     background: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(255, 240, 245, 0.15));
-    border-radius: 20px;
+    border-radius: 15px;
     border: 2px solid rgba(255, 182, 193, 0.3);
     position: relative;
     overflow: hidden;
@@ -338,9 +339,9 @@ select:focus {
 
 .praise-pause-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.2em;
+    font-size: 1.6em;
     color: #c44569;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: 700;
     text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.5);
     position: relative;
@@ -410,8 +411,9 @@ select:focus {
 
 /* Game Area */
 .game-area {
-    padding: 30px;
-    min-height: 400px;
+    padding: 15px 20px;
+    flex: 1;
+    overflow-y: auto;
 }
 
 .challenge-section {
@@ -558,11 +560,13 @@ select:focus {
 
 /* Stats */
 .stats {
-    background: #f8f9fa;
-    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 240, 245, 0.8), rgba(255, 182, 193, 0.1));
+    padding: 12px 15px;
     display: flex;
     justify-content: space-around;
-    border-top: 1px solid #e9ecef;
+    border-top: 2px solid rgba(255, 107, 157, 0.2);
+    flex-shrink: 0;
+    align-items: center;
 }
 
 .stat-item {
@@ -587,9 +591,10 @@ select:focus {
     background: linear-gradient(135deg, #c44569 0%, #8e44ad 100%);
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 15px 15px;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .footer::before {
@@ -681,44 +686,85 @@ select:focus {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 5px;
+        height: 100vh;
+    }
+
+    .container {
+        max-height: 98vh;
+        border-radius: 15px;
+    }
+
+    .header {
+        padding: 12px 10px;
     }
 
     .header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+    }
+
+    .praise-pause-title {
+        font-size: 1.3em;
     }
 
     .scrambled-word h2 {
         font-size: 1.8em;
         letter-spacing: 2px;
+        padding: 15px;
     }
 
     .game-controls {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+        padding: 10px 15px;
     }
 
     .control-group {
         flex-direction: column;
         text-align: center;
+        gap: 5px;
     }
 
     .answer-section, .custom-controls {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
     }
 
     #answer-input, #custom-book-input {
         width: 100%;
+        padding: 12px 15px;
     }
 
     .stats {
-        flex-direction: column;
-        gap: 15px;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 8px 10px;
+    }
+
+    .stat-item {
+        min-width: 80px;
     }
 
     .books-list {
         grid-template-columns: 1fr;
+    }
+
+    .game-area {
+        padding: 10px 15px;
+    }
+
+    .praise-pause-section {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 10px 12px;
+    }
+
+    .footer p {
+        font-size: 0.95em;
+        margin-bottom: 8px;
     }
 }
 
